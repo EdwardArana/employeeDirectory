@@ -35,7 +35,7 @@ class App extends React.Component {
             console.log(error);
         }
     }
-}
+
 
 handleInput = (val) => {
     this.setState({
@@ -63,7 +63,7 @@ employeeSorted = () => {
     this.setState = {
         usersFiltered: sortedUsers,
     };
-};
+
 
 this.setState({
     usersFiltered: this.state.users.sort((a, b) => { 
@@ -85,6 +85,8 @@ return this.setState({
     order: "ascend"
 });
 
+};
+
 sortTable = (e) => {
     const key = e.target.getAttribute("data-name");
 
@@ -93,3 +95,19 @@ sortTable = (e) => {
     });
 };
 
+render() {
+    return(
+        <div className="text-center mb-4">
+            <h1 className="text-center mb-4 searchbar">Employee Directory</h1>
+            
+            <label className="text-center mb-4" htmlFor="text">
+                <input className="text-center mb-4" placeholder="Search" type="text" onChange={(e) => this.handleInput(e.target.value)}/>
+            </label>
+            <employeeDir employees={this.state.users} sortTable={this.sortTable} />
+        </div>
+    );
+ }
+
+}
+
+export default App;
