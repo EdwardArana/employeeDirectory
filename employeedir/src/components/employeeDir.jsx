@@ -32,7 +32,7 @@ return (
             </thead>
             <tbody>
                 {props.employee.map((x, i) =>(
-                <Row employee={x} key={i + "empRow"} />
+                <Row employee={x} key={i + "-empRow"} />
                 ))}
             </tbody>
         </table>
