@@ -15,7 +15,7 @@ function employeeDir(props) {
                 <td className="text-center align-middle">{props.employee.email}</td>
             </tr>
         );
-    };
+    
 };
 
 return (
@@ -31,7 +31,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {props.employee.map((x, i) =>(
+                {props.employees.map((x, i) =>(
                 <Row employee={x} key={i + "-empRow"} />
                 ))}
             </tbody>
@@ -39,4 +39,5 @@ return (
     </div>
 );
 
+}
 export default employeeDir;
