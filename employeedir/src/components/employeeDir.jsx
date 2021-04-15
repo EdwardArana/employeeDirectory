@@ -1,7 +1,7 @@
 import React from "react";
-import "./employeeDir.css"
+import "./EmployeeDir.css"
 
-function employeeDir(props) {
+function EmployeeDir(props) {
 
     const Row = (props) => {
         return (
@@ -40,4 +40,4 @@ return (
 );
 
 }
-export default employeeDir;
+export default EmployeeDir;

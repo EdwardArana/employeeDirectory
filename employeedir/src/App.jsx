@@ -1,7 +1,7 @@
 import React from "react";
 import API from "./utils/API";
-import employeeDir from "./components/employeeDir";
-import "./App.css";
+import EmployeeDir from "./components/EmployeeDir";
+import "./index.css";
 
 class App extends React.Component {
     state = {
@@ -103,7 +103,7 @@ render() {
             <label className="text-center mb-4" htmlFor="text">
                 <input className="text-center mb-4" placeholder="Search" type="text" onChange={(e) => this.handleInput(e.target.value)}/>
             </label>
-            <employeeDir employees={this.state.users} sortTable={this.sortTable} />
+            <EmployeeDir employees={this.state.users} sortTable={this.sortTable} />
         </div>
     );
  }
