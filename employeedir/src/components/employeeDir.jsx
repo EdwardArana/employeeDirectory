@@ -1,5 +1,5 @@
 import React from "react";
-import "./EmployeeDir.css"
+import "./employeeDir.css"
 
 function EmployeeDir(props) {
 
